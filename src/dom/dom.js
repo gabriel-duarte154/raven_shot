@@ -1,6 +1,16 @@
 import components from '../components/components';
 import events from '../pubsub/pubsub';
 
+const ready = (fn) => {
+  if (typeof fn !== 'function') return;
+
+  if (document.readyState === 'complete') {
+    return fn();
+  }
+
+  document.addEventListener('interactive', fn, false);
+};
+
 const Dom = (() => {
   const mainContainer = document.querySelector('.container');
   const initialScreen = components.gameStartModal.querySelector('.modal');
@@ -81,6 +91,8 @@ const Dom = (() => {
   window.addEventListener('load', () => {
     openInitialScreen();
   });
+
+  ready(openInitialScreen);
 })();
 
 export default Dom;

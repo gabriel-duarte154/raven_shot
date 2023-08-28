@@ -53,6 +53,7 @@ const musicController = (() => {
 
   function playMenuMusic() {
     menuMusic.currentTime = 0;
+
     menuMusic.play();
 
     menuMusic.addEventListener('ended', playMenuMusic);
