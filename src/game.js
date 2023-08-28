@@ -163,10 +163,10 @@ function reset() {
   explosions = [];
   particles = [];
   timeToNextRaven = 0;
+  clearCanvas();
 }
 
 function startGame() {
-  reset();
   animate();
 }
 

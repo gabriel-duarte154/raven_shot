@@ -70,9 +70,9 @@ const Dom = (() => {
   function openInitialScreen() {
     mainContainer.innerHTML = '';
     mainContainer.appendChild(initialScreen);
-    events.emit('clearCanvas');
     events.emit('playMenuMusic');
     addInitialScreenEvents();
+    events.emit('resetGame');
     open();
   }
 

@@ -127,3 +127,13 @@ body {
   color: white;
   font-weight: bold;
 }
+
+@media (max-height: 400px) {
+  .button {
+    margin-top: 1rem;
+  }
+
+  .score {
+    padding: 0.5rem;
+  }
+}
