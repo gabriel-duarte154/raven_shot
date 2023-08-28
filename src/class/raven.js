@@ -8,7 +8,7 @@ class Raven {
     this.colisionCtx = colisionCtx;
     this.spriteWidth = 271;
     this.spriteheight = 194;
-    this.sizeModifier = Math.random() * 0.4 + 0.4;
+    this.sizeModifier = canvas.height > 400 ? Math.random() * 0.4 + 0.4 : Math.random() * 0.3 + 0.2;
     this.width = this.spriteWidth * this.sizeModifier;
     this.height = this.spriteheight * this.sizeModifier;
     this.x = this.canvas.width;
